@@ -20,21 +20,36 @@ digit (1 is not prime).
 
 # Structure 
 
-## MegaprimesLib
+### MegaprimesLib
 
-__MegaprimesLib/MegaprimeGenerator.cs__
+#### __MegaprimesLib/MegaprimeGenerator.cs__
 
 * Core megaprime logic containing prime number generation, and megaprime selection / output.
 
 __MegaprimesLib/CPUInfo.cs__
 * CPU cache information provider *Only available in Windows OS environment.
 
-## MegaprimesLib.Tests
+### MegaprimesLib.Tests
 
-### ___MegaprimesLib.Tests/GeneratorTestCase/UpTo___
+#### ___MegaprimesLib.Tests/GeneratorTestCase/UpTo___
 * Test cases for ___MegaprimesLib___ Generator class ```UpTo(UInt32)``` Method.
 
 
+# Building
+Clone the repository or download the zip file and extract to a suitable location.
+
+### Visual Studio 2019
+* Open the solution file Megaprimes.sln
+* Once the nuget packages have been restored simply build the MegaprimesCLI project.
+
+### Dotnet CLi
+* Navigate to the directory containing Megaprimes.sln
+* Exec commands 
+* * ```dotnet restore```
+* * ```dotnet build```
+
+The final build output will be placed in the folder path ```./build/bin/Debug/net5.0/*``` if in debug or 
+```./build/bin/Release/net5.0/*``` with intermediate build output being placed in ```./build/obj/MegaprimesLib/*```.
 
 # Example Use
 
