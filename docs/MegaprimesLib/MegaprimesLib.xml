@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MegaprimesLib</name>
+    </assembly>
+    <members>
+        <member name="T:MegaprimesLib.MegaprimeGenerator">
+            <summary>
+            Provides a mechanism for generating sequences of Megaprime numbers.
+            </summary>
+            <remarks>
+            A megaprime is defined as a prime number that is constituted of 
+            digits that are themselves prime numbers.
+            </remarks>
+        </member>
+        <member name="M:MegaprimesLib.MegaprimeGenerator.UpTo(System.UInt32)">
+            <summary>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing 
+            all megaprimes in the sequence 0 to <paramref name="MaxValue"/> 
+            (inclusive).
+            </summary>
+            <param name="MaxValue">
+            The maximum possible megaprime value returned by this method.
+            </param>
+            <returns>
+            An <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing megaprimes.
+            </returns>
+        </member>
+        <member name="M:MegaprimesLib.MegaprimeGenerator.KnownMegaprimesUpTo(System.UInt32)">
+            <summary>
+            Quick loopkup of megaprime values up to <paramref name="MaxValue"/>
+            using the <see cref="F:MegaprimesLib.MegaprimeGenerator._KnownMegaprimes"/> collection.
+            </summary>
+            <inheritdoc cref="M:MegaprimesLib.MegaprimeGenerator.UpTo(System.UInt32)"/>
+            <param name="MaxValue"/>
+            <returns/>
+        </member>
+        <member name="M:MegaprimesLib.MegaprimeGenerator.UnknownMegaprimesUpTo(System.UInt32)">
+            <summary>
+            Loopkup of megaprime values up to <paramref name="MaxValue"/> 
+            using the Sieve of Eratosthenes algorithm.
+            </summary>
+            <see href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"/>
+            <inheritdoc cref="M:MegaprimesLib.MegaprimeGenerator.UpTo(System.UInt32)"/>
+            <param name="MaxValue"/>
+            <returns/>
+        </member>
+    </members>
+</doc>

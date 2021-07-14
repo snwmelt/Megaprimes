@@ -1,0 +1,33 @@
+<Project>
+    <PropertyGroup>
+    <BaseOutputDirectory>$(MSBuildThisFileDirectory)</BaseOutputDirectory>
+    <BinaryOutputDirectory>$(BaseOutputDirectory)build\</BinaryOutputDirectory>
+    <FianlBinaryOutputDirectory>$(BinaryOutputDirectory)bin\$(Configuration)\</FianlBinaryOutputDirectory>
+    <IntermediateBinaryOutputDirectory>$(BinaryOutputDirectory)obj\$(MSBuildProjectName)\</IntermediateBinaryOutputDirectory>
+    <DocumentationOutputDirectory>$(BaseOutputDirectory)docs\$(MSBuildProjectName)\</DocumentationOutputDirectory>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <OutputPath>$(FianlBinaryOutputDirectory)</OutputPath>
+    <BaseIntermediateOutputPath>$(IntermediateBinaryOutputDirectory)</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>$(IntermediateBinaryOutputDirectory)</MSBuildProjectExtensionsPath>
+    <RestoreOutputPath>$(IntermediateBinaryOutputDirectory)</RestoreOutputPath>
+    <MSBuildProjectExtensionsPath>$(IntermediateBinaryOutputDirectory)</MSBuildProjectExtensionsPath>
+    <RestoreOutputPath>$(IntermediateBinaryOutputDirectory)</RestoreOutputPath>
+  </PropertyGroup>
+ 
+  <PropertyGroup>
+    <PackageOutputPath>$(FianlBinaryOutputDirectory)</PackageOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DocumentationFile>$(DocumentationOutputDirectory)$(MSBuildProjectName).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Platform>x64</Platform>
+  </PropertyGroup>
+  
+</Project>
